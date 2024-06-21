@@ -1,6 +1,6 @@
 {
   "name": "@varandas/piston",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.0",
   "description": "A simple game engine using RxJS and TypeScript",
   "main": "dist/piston-game-engine.es.js",
   "module": "dist/piston-game-engine.es.js",
