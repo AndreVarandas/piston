@@ -7,6 +7,6 @@ import git from '@semantic-release/git'
 
 export default {
   branches: ['main'],
-  repositoryUrl: 'https://github.com/AndreVarandas/piston.git',
+  repositoryUrl: 'https://github.com/AndreVarandas/piston',
   plugins: [commitAnalyzer, releaseNotesGenerator, changelog, npm, github, git],
 }
