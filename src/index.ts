@@ -1,0 +1,5 @@
+export { initCanvas } from './core/canvas'
+export { initInputManager } from './core/input'
+export { startGame } from './core/engine'
+export { loadSprite, drawSprite } from './assets/sprite'
+export { loadSound, playSound, stopSound } from './assets/sound'
