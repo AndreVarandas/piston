@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/AndreVarandas/piston/compare/v1.0.1...v1.0.2) (2024-06-21)
+
+
+### Bug Fixes
+
+* upgrades ga versions ([1557a5d](https://github.com/AndreVarandas/piston/commit/1557a5d0443c46cfaa4c86b7e27816407a3195d2))
+
 ## [1.0.1](https://github.com/AndreVarandas/piston/compare/v1.0.0...v1.0.1) (2024-06-21)
 
 
