@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/AndreVarandas/piston/compare/v1.0.0...v1.0.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* gh actions permissions ([f552e49](https://github.com/AndreVarandas/piston/commit/f552e4928613c8d46917c3c3e4ba3d78f6af05c4))
+
 # 1.0.0 (2024-06-21)
 
 
