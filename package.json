@@ -7,9 +7,8 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
+    "dev": "tsc --watch & chokidar 'src/**/*.ts' -c 'yarn build'",
     "build": "tsc && vite build",
-    "preview": "vite preview",
     "clean": "rimraf dist",
     "lint": "eslint 'src/**/*.{js,ts}' --quiet",
     "lint:fix": "eslint 'src/**/*.{js,ts}' --fix",
@@ -21,6 +20,7 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.6",
     "@semantic-release/npm": "^12.0.1",
+    "chokidar-cli": "^3.0.0",
     "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
