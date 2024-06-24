@@ -1,4 +1,4 @@
-type DrawSpriteOptions = {
+export type DrawSpriteOptions = {
   x: number
   y: number
   width?: number
@@ -7,6 +7,10 @@ type DrawSpriteOptions = {
   opacity?: number // Opacity value between 0 and 1
   scaleX?: number // Scale factor on X axis
   scaleY?: number // Scale factor on Y axis
+  frameX?: number // X position of the frame in the sprite sheet
+  frameY?: number // Y position of the frame in the sprite sheet
+  frameWidth?: number // Width of a single frame
+  frameHeight?: number // Height of a single frame
 }
 
 export async function loadSprite(src: string): Promise<HTMLImageElement> {
@@ -33,6 +37,10 @@ export function drawSprite(
     opacity = 1,
     scaleX = 1,
     scaleY = 1,
+    frameX = 0,
+    frameY = 0,
+    frameWidth,
+    frameHeight,
   } = options
 
   context.save() // Save the current state
@@ -42,10 +50,24 @@ export function drawSprite(
   context.scale(scaleX, scaleY) // Scale
   context.globalAlpha = opacity // Set opacity
 
-  if (typeof width === 'undefined' || typeof height === 'undefined') {
-    context.drawImage(image, 0, 0)
+  if (frameWidth !== undefined && frameHeight !== undefined) {
+    context.drawImage(
+      image,
+      frameX,
+      frameY,
+      frameWidth,
+      frameHeight,
+      0,
+      0,
+      width || frameWidth,
+      height || frameHeight,
+    )
   } else {
-    context.drawImage(image, 0, 0, width, height)
+    if (typeof width === 'undefined' || typeof height === 'undefined') {
+      context.drawImage(image, 0, 0)
+    } else {
+      context.drawImage(image, 0, 0, width, height)
+    }
   }
 
   context.restore() // Restore the original state
